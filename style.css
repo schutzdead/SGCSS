@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;900&display=swap');
+
+*{
+  margin:0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+header{
+  height: 10vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top:0;
+  z-index: 10;
+}
+
+header>img{
+  height: 5vh;
+  width: auto;
+  margin-left: 5vw;
+}
+
+footer{
+  height: 25vh;
+  width: 100%;
+  background-color: #3c725b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.wrapper1{
+  display: grid;
+  grid-template:1fr/repeat(4,1fr);
+  justify-items: center;
+  font-size: 14px;
+  width: 90%;
+  margin-top: 4vh;
+}
+
+.wrapper1>div{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.wrapper1>div>h2{
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.wrapper1>div>div{
+  cursor: pointer;
+}
+
+.wrapper1>div>div:hover{
+  transform: scale(1.05);
+}
+
+.wrapper2{
+  display: flex;
+  justify-content:space-between;
+  width: 100%;
+  align-items: center;
+  font-size: 13px;  
+}
+
+.copywrite{
+  padding: 0 0 10px 30px;
+}
+
+.logo{
+  display: flex;
+  gap:10px;
+  padding: 0 30px 10px 0;
+}
+
+.logo>img{
+  cursor: pointer;
+}
+
+main{
+  height: 65vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(246,240,234);
+  border-top: 3px solid rgba(246, 229, 212, 0.5);
+  box-sizing: border-box;
+  color:#303030;
+}
+
+.modal{
+  background-color: white;
+  width: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal>h1{
+  margin: 30px 40px;
+}
+
+.modal>button{
+  background-color: white;
+  border: 3px rgb(60, 114, 91,0.7) solid;
+  color :black;
+  padding: 7px 20px;
+  margin: 20px 0 18px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.modal>button:hover{
+  transform: scale(1.02);
+}
+
+.modal>h1>span{
+  float: right;
+  padding-left: 10px;
+  animation : 4s infinite rotateSpan;
+}
+
+
+@keyframes rotateSpan {
+    from { transform: rotate(0); }
+    10% { transform: rotate(360deg); }
+    to { transform: rotate(360deg); }
+}
+
+.wrapperField{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  width: 70%;
+}
+
+.wrapperField>div{
+  background-color: #f6f6f9;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap : 8px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.wrapperField>div>label{
+  padding: 10px 0px 0px 17px;
+  font-size: 14px;
+}
+
+.wrapperField>div>input{
+  background-color: #f6f6f9;
+  border: none;
+  margin : 0 0 10px 10px;
+  font-size: 0.9rem;
+  width: 90%;
+  padding-left: 7px;
+}
+
+.wrapperField>div>input:focus{
+  outline: none;
+}
+
+.wrapperField>div>input::placeholder{
+  font-size: 13px;
+}
+
+.wrapperHelp{
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+  color:rgb(60, 114, 91);
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.wrapper1>div>div, .wrapper1>div>h2{
+  white-space: nowrap;
+}
+
+@media (max-height:750px){
+  main{
+    height: auto;
+  }
+
+  .modal>h1{
+    margin-top: 20px;
+  }
+
+  .wrapperHelp{
+    margin-bottom: 20px;
+  }
+
+  .modal{
+    margin: 50px 0;
+  }
+}
+
+@media (max-width:800px){
+  footer{
+    height: auto;
+    gap:50px;
+  }
+
+  header>img{
+    margin-left: 0;
+  }
+
+  header{
+    justify-content: center;
+  }
+
+  .wrapper1{
+    grid-template:repeat(2,1fr)/repeat(2,1fr);
+    row-gap: 50px;
+  }
+
+  .modal>h1 {
+    font-size: max(4.2vw, 24px);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width:700px){
+  .modal{
+    width: 80%;
+  }
+
+  .wrapper1{
+    width: 100%;
+  }
+}
+
+@media (max-width:550px){
+  main{
+    height: auto;
+  }
+
+  .modal>h1{
+    margin-top: 20px;
+  }
+
+  .wrapperHelp{
+    margin-bottom: 20px;
+  }
+
+  .modal{
+    margin: 50px 0;
+  }
+
+  .wrapperField>div>input{
+    font-size: 16px;
+  }
+
+  .wrapperField{
+    width: 85%;
+  }
+
+  .wrapper2{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo{
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .wrapper1>div>h2{
+    font-size: 13px;
+  }
+
+  .wrapper1>div>div{
+    font-size: 13px;
+  }
+
+  .copywrite{
+    padding-left: 0;
+  }
+}
